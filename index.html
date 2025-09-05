@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SightFree</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>SightFree</h1>
+      
+      <div class="box1">
+        <ul>
+          <li><a href="#">Home</a></li> 
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+            <li class="toggle" onclick="toggleMode()">🌙</li>
+          </li>
+        </ul>
+
+        <div id="about" class="section">
+          <div class="card">
+            <p>This website helps visually impaired people using <b>Voice Assistant</b> and <b>Money Recognition</b> features.</p>
+          </div>
+        </div>
+
+        <div id="contact" class="section">
+          <div class="card1">
+            <p>Email: support@example.com</p>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+
+    <section class="box2">
+      <h1>SightFree</h1>
+      <p>Assistive Technology for Visually Impaired</p>
+      <button class="my-btn"><b>Get Started</b></button>
+    </section>
+  </header>
+
+  <!-- Money Recognition -->
+  <section>
+    <div class="feature">
+      <h2>📷 Money Recognition</h2>
+      <p>Use your camera to identify money notes.</p>
+      <button class="btn" onclick="showCameraSteps()">Open Camera</button>
+
+      <!-- Steps Section -->
+      <div id="steps" style="display:none;">
+        <h2>How to Use</h2>
+        <ol>
+          <li>Click <b>Allow</b> when your browser asks for camera access.</li>
+          <li>Hold the currency note in front of the camera clearly.</li>
+          <li>Wait for the system to scan and recognize the money.</li>
+          <li>The result will be displayed on your screen.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Voice Assistant -->
+    <div class="features">
+      <h2>🎙️Voice Assistant</h2>
+      <p>Hear the Amount Detected through audio.</p>
+      <button class="btn" onclick="showVoiceSteps('steps2')">Activate Voice Assistant</button>
+      <div class="steps" id="steps2" style="display:none;">
+        <h2>How to Use</h2>
+        <ol>
+          <li>Click on <b>Activate Voice Assistant</b>.</li>
+          <li>Grant permission for microphone access if asked.</li>
+          <li>Wait for the system to process the recognized money value.</li>
+          <li>You will hear the detected amount through audio.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <div class="photo">
+    <div class="nav">
+      <img id="myImage" src="banner.jpg" class="find">
+      <button id="btn">Toggle</button>
+    </div>
+  </div>
+  <div class="article">
+    <h2>Protecting Visually Impaired People from Money Fraud</h2>
+    <p>In today’s society, financial fraud has become a growing concern, especially for vulnerable groups like the visually impaired. While technology has advanced in many areas to improve accessibility, fraudsters still exploit the inability of blind or partially sighted individuals to verify currency notes easily. This exploitation not only causes financial loss but also creates emotional distress and erodes trust in everyday social interactions.</p>
+ </div>
+   <div class="article2">
+    <h2>The Challenge Faced by the Visually Impaired</h2>
+    <p>Currency identification is one of the major hurdles for people with visual disabilities. Many depend on trust when handling transactions in public places such as markets, shops, and transport services. Unfortunately, fraudsters take advantage of this trust by handing over lower denomination notes or even counterfeit money.
+
+      For example, if a visually impaired person gives a high-value note, a dishonest individual may return incorrect change, cheating them without their knowledge. Since they cannot visually confirm the currency, the fraud often goes unnoticed until much later.</p>
+   </div>
+   
+      
+    </div>
+   </div>
+   
+  <div class="fillup">
+  <div class="subscribe-box">
+    <h2>Subscribe Us</h2>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
+  </div>
+  </hr>
+
+   
+</body>
+<script>
+    myImage.style.width='146px';
+        btn.addEventListener("click", ()=>{
+           if( myImage.style.width=="300px"){
+            myImage.style.width='146px';
+           }
+           else if(myImage.style.width=='146px'){
+            myImage.style.width='300px';
+           }
+        })
+ </script>
+ <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+  <footer>
+  <p>&copy; 2025 SightFree. All Rights Reserved.</p>
+</footer>
+
+ 
+</html>
